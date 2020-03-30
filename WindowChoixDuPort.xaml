@@ -1,0 +1,23 @@
+﻿<Window x:Class="Affichage_LED.WindowChoixDuPort"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Affichage_LED"
+        mc:Ignorable="d"
+        Title="WindowChoixDuPort" Height="400" Width="400" WindowStartupLocation="CenterOwner">
+    <StackPanel>
+        <Label FontWeight="Bold" FontSize="16" Margin="50,100,0,0">Port Com :</Label>
+        <ComboBox x:Name="My_combo" Width="200" Margin="0,10,0,0">
+            <ComboBoxItem IsSelected="True">COM 1</ComboBoxItem>
+            <ComboBoxItem>COM 2</ComboBoxItem>
+            <ComboBoxItem>COM 3</ComboBoxItem>
+            <ComboBoxItem>COM 4</ComboBoxItem>
+            <ComboBoxItem>COM 5</ComboBoxItem>
+            <ComboBoxItem>COM 6</ComboBoxItem>
+            <ComboBoxItem>COM 7</ComboBoxItem>
+            <ComboBoxItem>COM 8</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="Button_ChoixDuPort" Width="100" Margin="0,20,0,0" Click="Button_ChoixDuPort_Click">OK</Button>
+    </StackPanel>
+</Window>

@@ -1,0 +1,164 @@
+﻿<Window x:Class="Affichage_LED.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Affichage_LED"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Menu>
+            <MenuItem Header="Fichier">
+                <MenuItem x:Name="Button_Nouveau" Header="Nouveau"/>
+                <MenuItem x:Name="Button_Ouvrir" Command="Open" Click="Button_Ouvrir_Click"/>
+                <MenuItem x:Name="Button_Sauver" Command="Save"/>
+                <Separator />
+                <MenuItem x:Name="Button_SetCOM" Header="Set COM..." Click="Button_SetCOM_Click" />
+                <Separator />
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Edition">
+                <MenuItem Command="Cut"/>
+                <MenuItem Command="Copy"/>
+                <MenuItem Command="Paste"/>
+                <MenuItem Command="Delete"/>
+            </MenuItem>
+            <MenuItem Header="Commandes">
+                <MenuItem Header="Effets Principaux">
+                    <MenuItem Header="Immédiat"/>
+                    <MenuItem Header="XOuvrir"/>
+                    <MenuItem Header="Rideaux montant"/>
+                    <MenuItem Header="Rideaux descendant"/>
+                    <MenuItem Header="Déroullement à gauche"/>
+                    <MenuItem Header="Déroulement à droite"/>
+                    <MenuItem Header="VOuvrir"/>
+                    <MenuItem Header="VFermer"/>
+                    <MenuItem Header="Déroullemet en haut"/>
+                    <MenuItem Header="Déroullement en bas"/>
+                    <MenuItem Header="Maintenir"/>
+                    <MenuItem Header="Neige"/>
+                    <MenuItem Header="Scintiller"/>
+                    <MenuItem Header="Bouger par bloc"/>
+                    <MenuItem Header="Aleatoire"/>
+                    <MenuItem Header="Bienvenue">
+                        <MenuItem Header="Bonjour à tous"/>
+                        <MenuItem Header="Bienvenue"/>
+                    </MenuItem>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Rapidité..."/>
+                <MenuItem Header="Effets d'affichage">
+                    <MenuItem Header="Normal"/>
+                    <MenuItem Header="Clignement"/>
+                    <MenuItem Header="Musique 1"/>
+                    <MenuItem Header="Musique 2"/>
+                    <MenuItem Header="Musique 3"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Temps d'affichage..."/>
+                <Separator/>
+                <MenuItem Header="Effets de fermeture">
+                    <MenuItem Header="Immediat"/>
+                    <MenuItem Header="XOuvrir"/>
+                    <MenuItem Header="Rideaux montant"/>
+                    <MenuItem Header="Rideaux descendant"/>
+                    <MenuItem Header="Déroullement à gauche"/>
+                    <MenuItem Header="Déroulement à droite"/>
+                    <MenuItem Header="VOuvrir"/>
+                    <MenuItem Header="VFermer"/>
+                    <MenuItem Header="Déroullemet en haut"/>
+                    <MenuItem Header="Déroullement en bas"/>
+                    <MenuItem Header="Maintenir"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Fonctions spéciales">
+                    <MenuItem Header="Cloche">
+                        <MenuItem Header="0.5 Sec"/>
+                        <MenuItem Header="1 Sec"/>
+                        <MenuItem Header="1.5 Sec"/>
+                        <MenuItem Header="2 Sec"/>
+                    </MenuItem>
+                    <MenuItem x:Name="Button_Date" Header="Date" Click="Button_Date_Click"/>
+                    <MenuItem x:Name="Button_Heure" Header="Heure" Click="Button_Heure_Click"/>
+                    <MenuItem Header="Colonne..."/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Police">
+                <MenuItem Header="Police 4x7"/>
+                <MenuItem Header="Police 5x7"/>
+                <MenuItem Header="Police 6x7"/>
+            </MenuItem>
+            <MenuItem Header="Couleur">
+                <MenuItem x:Name="Button_Rouge" Header="Rouge" Click="Button_Rouge_Click"/>
+                <MenuItem x:Name="Button_Vert" Header="Vert" Click="Button_Vert_Click"/>
+                <MenuItem x:Name="Button_Orange" Header="Orange" Click="Button_Orange_Click"/>
+                <MenuItem x:Name="Button_Rouge_inverse" Header="Rouge inversé" Click="Button_Rouge_inverse_Click"/>
+                <MenuItem x:Name="Button_Vert_inverse" Header="Vert inversé" Click="Button_Vert_inverse_Click"/>
+                <MenuItem x:Name="Button_Orange_inverse" Header="Orange inversé" Click="Button_Orange_inverse_Click"/>
+                <MenuItem x:Name="Button_Rouge_dans_vert" Header="Rouge dans Vert" Click="Button_Rouge_dans_vert_Click"/>
+                <MenuItem x:Name="Button_Vert_dans_Rouge" Header="Vert dans rouge" Click="Button_Vert_dans_Rouge_Click"/>
+                <MenuItem x:Name="Button_RYG" Header="RYG" Click="Button_RYG_Click"/>
+                <MenuItem x:Name="Button_Arc_en_ciel" Header="Arc-en-ciel" Click="Button_Arc_en_ciel_Click"/>
+            </MenuItem>
+            <MenuItem Header="Fonctions">
+                <MenuItem Header="Envoyer un message..."/>
+                <Separator/>
+                <MenuItem Header="Lancer la page..."/>
+                <MenuItem Header="Lier les pages à lancer..."/>
+                <Separator/>
+                <MenuItem Header="Définir l'ID..."/>
+                <MenuItem Header="Définir l'heure..."/>
+                <MenuItem Header="Définir la luminosité"/>
+                <Separator/>
+                <MenuItem Header="Programmer la date..."/>
+                <Separator/>
+                <MenuItem Header="Supprimer la page..."/>
+                <MenuItem Header="Supprimer la programmation daté..."/>
+                <MenuItem Header="Tout supprimer"/>
+                <Separator/>
+                <MenuItem Header="Montrer la configuration des couleurs"/>
+            </MenuItem>
+        </Menu>
+
+        <Menu>
+            <Button>
+                <Image Source="img\nouveau.png" Width="20"/>
+            </Button>
+            <Button>
+                <Image Source="img\ouvrir.jpg" Width="20"/>
+            </Button>
+            <Button>
+                <Image Source="img\enregistrer.jpg" Width="20"/>
+            </Button>
+            <Button>
+                <Image Source="img\couper.png" Width="20"/>
+            </Button>
+            <Button>
+                <Image Source="img\copier.png" Width="20"/>
+            </Button>
+            <Button>
+                <Image Source="img\coller.jpg" Width="20"/>
+            </Button>
+            <Button x:Name="Button_SendMessage" Click="Button_SendMessage_Click">
+                <Image Source="img\send_message.jpg" Width="20"/>
+            </Button>
+            <Button>
+                <Image Source="img\send_message_page.jpg" Width="20"/>
+            </Button>
+        </Menu>
+        <TextBlock TextWrapping="Wrap" Text=" texte : " Margin="0,0,462,0"/>
+        <RichTextBox x:Name="My_Textbox" Height="47">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Grid Height="268">
+            <RichTextBox x:Name="My_Textbox_2" Margin="0,258,0,-37">
+                <FlowDocument/>
+            </RichTextBox>
+        </Grid>
+
+    </StackPanel>
+</Window>
